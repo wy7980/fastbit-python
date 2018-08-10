@@ -7,6 +7,7 @@ ext = "pyx"
 
 setup(
     name = 'fastbit',
+    version = '1.0.0',
     ext_modules = [
         Extension('fastbit._fastbit', ['fastbit/_fastbit.' + ext],
         libraries = ["fastbit"],
@@ -15,4 +16,6 @@ setup(
         )
     ],
     cmdclass = {'build_ext': build_ext},
+    packages = ["fastbit"],
+    package_dir = {"fastbit": "fastbit"},
 )
